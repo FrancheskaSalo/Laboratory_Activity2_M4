@@ -1,6 +1,9 @@
 // MyQueue.java
 public class MyQueue implements QueueInterface {
     Object[] queue = new Object[10]; //creates array with fixed size = 10
+    private int frontIndex = 0;
+    private int rearIndex = -1;
+    private int count = 0;
 
     @Override
     public void push(Object item) {
@@ -9,13 +12,20 @@ public class MyQueue implements QueueInterface {
     public Object pop() {
         return null;
     }
+
     @Override
     public Object front() {
-        return null;
+        if (empty()) {
+            return null;
+        }
+        return queue[frontIndex];
     }
     @Override
     public Object back() {
-        return null;
+        if (empty()) {
+            return null;
+        }
+        return queue[rearIndex];
     }
     @Override
     public int size() {

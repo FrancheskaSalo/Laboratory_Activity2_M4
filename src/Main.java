@@ -9,12 +9,8 @@
  * Last Modified: October 07, 2026
  **/
 
-import java.util.Queue;
-
- public class Main {
+public class Main {
     public static void main(String[] args) {
 
-
-
-        }
     }
+}
